@@ -4,5 +4,4 @@
 -- );
 
 
-INSERT INTO data (name, sentence)
-	VALUES('yeet', 'Hello world');
+INSERT INTO data (name) VALUES('orange')

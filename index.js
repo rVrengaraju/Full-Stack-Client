@@ -22,8 +22,17 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
 	console.log(req.body)
 	res.redirect("/admin/" + req.body.firstname)
-    // res.render('../views/login')
+})
 
+app.get("/signup", (req, res) => {
+	console.log("Hit sign up endpoint")
+	res.render('../views/signup')
+})
+
+app.post("/signup", (req, res) => {
+	console.log("hit signup post endpoint")
+	res.redirect("./login")
+	console.log(req.body.singupName)
 })
 
 app.get('/admin/:name', (req, res) => {
